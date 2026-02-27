@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books | MyLibrary</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.75rem;
+            background: var(--primary-light);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: white;
+        }
+
+        .category-select {
+            padding: 0.75rem;
+            background: var(--primary-light);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: white;
+            min-width: 150px;
+        }
+
+        .availability-tag {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .available {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .issued {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        .book-author {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fas fa-book-reader"></i> My<span>Library</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html" class="active">Books</a></li>
+                <li id="issuedLink" style="display: none;"><a href="issued-books.html">Issued Books</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-auth">Login / Signup</a>
+                </li>
+                <li id="logoutLink" style="display: none;">
+                    <button class="logout-btn" id="logoutBtn">Logout</button>
+                </li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 3rem; text-align: center;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Explore Our Collection</h1>
+            <p style="color: var(--text-secondary);">Filter and search through our extensive library of thousands of
+                titles.</p>
+        </header>
+
+        <div class="filters">
+            <input type="text" id="searchInput" class="filter-input" placeholder="Search by title or author...">
+            <select id="categoryFilter" class="category-select">
+                <option value="All">All Categories</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Technology">Technology</option>
+                <option value="Mystery">Mystery</option>
+            </select>
+        </div>
+
+        <div class="grid" id="booksGrid">
+            <!-- Books will be rendered here -->
+        </div>
+    </main>
+
+    <footer style="margin-top: 4rem;">
+        <div class="container copyright">
+            <p>Copyright &copy; 2026 MyLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/books.js"></script>
+</body>
+
+</html>

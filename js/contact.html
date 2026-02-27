@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MyLibrary</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fas fa-book-reader"></i> My<span>Library</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li id="issuedLink" style="display: none;"><a href="issued-books.html">Issued Books</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-auth">Login / Signup</a>
+                </li>
+                <li id="logoutLink" style="display: none;">
+                    <button class="logout-btn" id="logoutBtn">Logout</button>
+                </li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div style="max-width: 800px; margin: 4rem auto;">
+            <header style="margin-bottom: 4rem; text-align: center;">
+                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Get in Touch</h1>
+                <p style="color: var(--text-secondary);">Have questions or feedback? We'd love to hear from you.</p>
+            </header>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">Contact Information</h2>
+                    <div style="margin-bottom: 2rem;">
+                        <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Address</p>
+                        <p style="color: var(--text-secondary);">123 Scholar Street, Suite 456<br>Bookville, BK 98765
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Support</p>
+                        <p style="color: var(--text-secondary);">support@mylibrary.com<br>+1 234 567 890</p>
+                    </div>
+                    <div>
+                        <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Hours</p>
+                        <p style="color: var(--text-secondary);">Mon - Fri: 9:00 AM - 8:00 PM<br>Sat - Sun: 10:00 AM -
+                            4:00 PM</p>
+                    </div>
+                </div>
+
+                <form id="contactForm" style="background: var(--primary-light); padding: 2.5rem; border-radius: 24px;">
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" class="form-input" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" class="form-input" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" class="form-input" required placeholder="How can we help?"
+                            style="height: 150px; resize: none;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 4rem;">
+        <div class="container copyright">
+            <p>Copyright &copy; 2026 MyLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            showMessage(`Thank you, ${name}! Your message has been sent.`);
+            e.target.reset();
+        });
+    </script>
+</body>
+
+</html>

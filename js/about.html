@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MyLibrary</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fas fa-book-reader"></i> My<span>Library</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li id="issuedLink" style="display: none;"><a href="issued-books.html">Issued Books</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-auth">Login / Signup</a>
+                </li>
+                <li id="logoutLink" style="display: none;">
+                    <button class="logout-btn" id="logoutBtn">Logout</button>
+                </li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 4rem; text-align: center;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Our Story</h1>
+            <p style="color: var(--text-secondary); max-width: 800px; margin: 0 auto;">MyLibrary was founded in 2026
+                with a simple mission: to make the world's knowledge accessible to everyone, everywhere.</p>
+        </header>
+
+        <section style="margin-bottom: 5rem;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                <div>
+                    <h2 style="margin-bottom: 1.5rem; color: var(--accent);">History & Vision</h2>
+                    <p style="margin-bottom: 1rem; color: var(--text-secondary);">What started as a small community
+                        project has grown into a global platform serving millions of readers. We believe that digital
+                        libraries are the cornerstone of a modern civilization.</p>
+                    <p style="color: var(--text-secondary);">Our vision is to build a seamless ecosystem where
+                        information flows freely, and learning is limited only by one's curiosity.</p>
+                </div>
+                <div style="background: var(--primary-light); padding: 3rem; border-radius: 24px;">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--accent);">Our Policies</h2>
+                    <ul style="color: var(--text-secondary); list-style: inside circle;">
+                        <li style="margin-bottom: 0.5rem;">Respect digital copyrights</li>
+                        <li style="margin-bottom: 0.5rem;">One reader per digital copy</li>
+                        <li style="margin-bottom: 0.5rem;">14-day standard issue period</li>
+                        <li style="margin-bottom: 0.5rem;">Community-driven category labeling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 5rem; text-align: center;">
+            <h2 style="margin-bottom: 3rem;">Membership Guidelines</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Free Tier</h3>
+                    <p style="margin: 1rem 0;">Issue up to 3 books at a time. No monthly fees.</p>
+                </div>
+                <div class="card">
+                    <h3>Premium</h3>
+                    <p style="margin: 1rem 0;">Unlimited issues and early access to new releases.</p>
+                </div>
+                <div class="card">
+                    <h3>Institutions</h3>
+                    <p style="margin: 1rem 0;">Tailored packages for schools and universities.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 4rem;">
+        <div class="container copyright">
+            <p>Copyright &copy; 2026 MyLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

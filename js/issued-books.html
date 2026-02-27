@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Issued Books | MyLibrary</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fas fa-book-reader"></i> My<span>Library</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="issued-books.html" class="active">Issued Books</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-auth">Login / Signup</a>
+                </li>
+                <li id="logoutLink" style="display: none;">
+                    <button class="logout-btn" id="logoutBtn">Logout</button>
+                </li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 3rem; text-align: center;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">My Issued Books</h1>
+            <p style="color: var(--text-secondary);">Manage your borrowed titles and return them when you're done.</p>
+        </header>
+
+        <div class="grid" id="issuedBooksGrid">
+            <!-- Issued books will be rendered here -->
+        </div>
+    </main>
+
+    <footer style="margin-top: 4rem;">
+        <div class="container copyright">
+            <p>Copyright &copy; 2026 MyLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/books.js"></script>
+</body>
+
+</html>
